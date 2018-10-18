@@ -3,6 +3,13 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DataService } from '../data.service';
 
+export interface userSchemas {
+  FirstName: string,
+  LastName: string,
+  Email: string,
+  Phone: string,
+  Status: string
+}
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
@@ -10,16 +17,17 @@ import { DataService } from '../data.service';
 })
 export class ViewComponent implements OnInit {
 
-  name:string
-  user={}
-  private subscription:Subscription;
+  name: string
+  user: userSchemas
 
-  constructor(activatedRoute:ActivatedRoute,data:DataService) { 
-    this.subscription=activatedRoute.params.subscribe(
-      (param:any) => {
-        this.name=param['name']
-        this.user=data.getContactDetails(this.name)
-       
+  private subscription: Subscription;
+
+  constructor(activatedRoute: ActivatedRoute, data: DataService) {
+    this.subscription = activatedRoute.params.subscribe(
+      (param: any) => {
+        this.name = param['name']
+        this.user = data.getContactDetails(this.name)
+
       }
     );
   }

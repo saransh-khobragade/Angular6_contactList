@@ -9,13 +9,19 @@ import { Router } from '@angular/router';
 })
 export class AddComponent implements OnInit {
 
-  constructor(private data:DataService,private route:Router) { }
+  constructor(private data: DataService, private route: Router) { }
+
+  FirstName: ""
+  LastName: ""
+  Email: ""
+  Phone: ""
+  Status: ""
 
   ngOnInit() {
   }
 
-  addUser(myform){
-    if(this.data.setContactDetails(myform.value))
+  addUser(myform) {
+    if (this.data.setContactDetails(myform.value))
       this.route.navigate(['/contacts'])
   }
 }
