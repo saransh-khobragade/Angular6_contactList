@@ -1,0 +1,54 @@
+<div class="m-2">
+        <div class="container">
+            <span class="d-flex justify-content-center">
+                <a [routerLink]="['/contacts']"><button class="btn btn-primary m-2"><i class="fas fa-chevron-circle-left fa-3x"></i></button></a>
+                <span class="display-4 text-center">Add Contact Details</span>
+            </span>
+    
+        </div>
+        <div class="container">
+    
+            <form class="m-5" #myForm="ngForm" (ngSubmit)="addUser(myForm)">
+                <div class="form-row m-1">
+                    <div class="col text-center">
+                        <label for="inputEmail4">First Name</label>
+                    </div>
+                    <div class="col text-center">
+                        <input type="text" [(ngModel)]="FirstName" class="form-control" name="FirstName" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="form-row m-1">
+                    <div class="col text-center">
+                        <label for="inputEmail4">Last Name</label>
+                    </div>
+                    <div class="col text-center">
+                        <input type="text" [(ngModel)]="LastName" class="form-control" name="LastName" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-row m-1">
+                    <div class="col text-center">
+                        <label for="inputEmail4">Email</label>
+                    </div>
+                    <div class="col text-center">
+                        <input type="text" [(ngModel)]="Email" class="form-control" name="Email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-row m-1">
+                    <div class="col text-center">
+                        <label for="inputEmail4">Phone No</label>
+                    </div>
+                    <div class="col text-center">
+                        <input type="text" [(ngModel)]="Phone" class="form-control" name="Phone" placeholder="Phone No">
+                    </div>
+                </div>
+                <div class="form-row m-4">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-primary btn-lg" >Add</button>
+                    </div>
+                </div>
+    
+            </form>
+    
+    
+        </div>
+    </div>
