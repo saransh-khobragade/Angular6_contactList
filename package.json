@@ -1,13 +1,14 @@
 {
   "name": "contact-list",
   "version": "0.0.0",
+  "homepage": "https://saru998.github.io/ConatctList_Angular6/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "deploy":"gh-pages -d build"
   },
   "private": true,
   "dependencies": {
